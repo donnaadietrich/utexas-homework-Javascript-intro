@@ -9,7 +9,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>   
+<body>
+<!-- <div class = "page-header">
+    <p>UFO sightings</p>
+</div>        -->
 <div class="jumbotron jumbotron-fluid">
     <div class="container text-center">
         <h1 class="display-3">UFO Sightings</h1>
@@ -17,18 +20,21 @@
         </div>        
 </div>       
  
-  <div class="container">
+<div class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-2">
         <div class="form-group">
-          <input type="text" class="form-control" id="state" placeholder="State">
+          <label for="date">Enter a date</label>
+          <input type="date" class="form-control" id="date" placeholder="1/11/2011">
+          <label for="city">Enter a city</label>
+          <input type="text" class="form-control" id="city" placeholder="Roswell">
+          <label for="state">Enter a state</label>
+          <input type="text" class="form-control" id="state" placeholder="New Mexico">
           <a id="search" class="btn btn-default">Search</a>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <table class="table table-striped">
+      <div class="col-md-10">
+        <table class="table table-striped">  
           <thead>
             <tr>
               <th>Date</th>
@@ -45,7 +51,7 @@
         </table>
       </div>
     </div>
-  </div>
+</div>
   <script src="ufoData.js" type="text/javascript"></script>
   <script src="index.js" type="text/javascript"></script>
 </body>
