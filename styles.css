@@ -11,5 +11,15 @@
 .page-header {
     background-color: #34282C;
     color: chartreuse;
-    margin: -40px:
+    text-indent: 5%;
 }
+
+.page-style{
+    background-color: #34282C;
+    color: white;
+    font: Impact;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: darkolivegreen; 

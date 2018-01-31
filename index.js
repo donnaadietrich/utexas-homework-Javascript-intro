@@ -1,7 +1,7 @@
 // // Get references to the tbody element, input fields and button
 var $tbody = document.querySelector("tbody");
-// var $dateInput = document.querySelector("#date");
-// var $cityInput = document.querySelector("#city");
+var $dateInput = document.querySelector("#date");
+var $cityInput = document.querySelector("#city");
 var $stateInput = document.querySelector("#state");
 // var $countryInput = document.querySelector('#country');
 // var $shapeInput = document.querySelector('#shape');
@@ -11,7 +11,7 @@ var $searchBtn = document.querySelector("#search");
 $searchBtn.addEventListener("click", handleSearchButtonClick);
 
 // Set filteredData to ufoData initially
-var filteredData = ufoData;
+var filteredData = dataSet;
 
 // renderTable renders the filteredData to the tbody
 function renderTable() {
