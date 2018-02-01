@@ -1,7 +1,7 @@
 // // Get references to the tbody element, input fields and button
 var $tbody = document.querySelector("tbody");
-var $dateInput = document.querySelector("#date");
-var $cityInput = document.querySelector("#city");
+// var $dateInput = document.querySelector("#date");
+// var $cityInput = document.querySelector("#city");
 var $stateInput = document.querySelector("#state");
 // var $countryInput = document.querySelector('#country');
 // var $shapeInput = document.querySelector('#shape');
@@ -35,15 +35,17 @@ function handleSearchButtonClick() {
   // Format the user's search by removing leading and trailing whitespace, lowercase the string
   var filterState = $stateInput.value.trim().toLowerCase();
 
-  // Set filteredData to an array of all ufo objects whose "state" matches the filter
-  filteredData = ufoData.filter(function(ufo) {
-    var ufoState = ufo.state.toLowerCase();
+  // Set filteredAddresses to an array of all addresses whose "state" matches the filter
+  filteredData = dataSet.filter(function(address) {
+    var addressState = address.state.toLowerCase();
 
-    // If true, add the address to the filteredData, otherwise don't add it to filteredData
-    return ufoState === filteredData;
+    // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
+    return addressState === filterState;
   });
   renderTable();
 }
 
 // Render the table for the first time on page load
-renderTable();
+renderTable()
+
+

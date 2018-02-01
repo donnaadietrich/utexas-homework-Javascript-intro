@@ -12,12 +12,13 @@
     background-color: #34282C;
     color: chartreuse;
     text-indent: 5%;
-}
+    }
 
 .page-style{
     background-color: #34282C;
     color: white;
     font: Impact;
+    font-size: 1em;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td, 
