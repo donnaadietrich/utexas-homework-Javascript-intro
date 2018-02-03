@@ -31,48 +31,20 @@ function renderTable() {
   }
 }
 
-function handleSearchButtonClick(event) {
-  // prevent page from refreshing
-  event.preventDefault();
+function handleSearchButtonClick() {
+  // Format the user's search by removing leading and trailing whitespace, lowercase the string
+  var filterState = $stateInput.value.trim().toLowerCase();
 
-  var dateFilter = d3.select("#dateInput").node().value;
-  d3.select("dateInput").html("");
-  if  (dateFilter){
-    filteredData = filteredData.filter(function(data) {
-      return data.country === countryFilter;
-    });
+  // Set filteredAddresses to an array of all addresses whose "state" matches the filter
+  filteredData = dataSet.filter(function(address) {
+    var addressState = address.state.toLowerCase();
 
-  var cityFilter = d3.select("#cityInput").node().value;
-  d3.select("cityInput").html("");
-  if  (cityFilter){
-    filteredData = filteredData.filter(function(data) {
-      return data.city === cityFilter;
-    });
- 
-  var stateFilter = d3.select("#stateInput").node().value;
-  d3.select("stateInput").html("");
-  if  (stateFilter){
-    filteredData = filteredData.filter(function(data) {
-      return data.state === stateFilter;
-    });
-
-  var countryFilter = d3.select("#countryInput").node().value;
-  d3.select("countryInput").html("");
-  if  (countryFilter) {
-    filteredData = filteredData.filter(function(data){
-      return data.country === countryFilter;
-    });
-
-  var shapeFilter = d3.select("#shapeInput").node().value;
-  d3.select("shapeInput").html("");
-  if  (shapeFilter) {
-    filteredData = filteredData.filter(function(data){
-      return data.shape === shapeFilter;
-    });
-  };
-
-renderTable();
+    // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
+    return addressState === filterState;
+  });
+  renderTable();
 }
 
 // Render the table for the first time on page load
-renderTable();
+renderTable()
+
