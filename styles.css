@@ -25,4 +25,27 @@
 .table-striped>tbody>tr:nth-child(odd)>th {
    background-color: darkolivegreen; 
 
-   
+   tr:hover:not(th) {background-color: rgba(237,28,64,.1);}
+
+
+input[type="button"] {
+	transition: all .3s;
+    border: 1px solid black;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+	font-size: 15px;
+}
+
+input[type="button"]:not(.active) {
+	background-color: darkolivegreen;
+}
+
+.active {
+	background-color: black;
+	color : white;
+}
+
+input[type="button"]:hover:not(.active) {
+	background-color: darkolivegreen;
+}
